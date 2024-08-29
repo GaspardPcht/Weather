@@ -1,18 +1,9 @@
-// Exemple dans index.js ou app.js
+var express = require("express");
+var router = express.Router();
 
-// Si vous utilisez Express.js
-const express = require("express");
-const app = express();
-
-// Autres routes et middlewares...
-
-// Route pour la racine
-app.get("/", (req, res) => {
-  res.send("Welcome to the Weather App Backend");
+// Exemple d'une route GET
+router.get("/", function (req, res, next) {
+  res.send("Index route");
 });
 
-// Démarrage du serveur
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+module.exports = router;
