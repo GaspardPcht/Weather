@@ -1,4 +1,18 @@
-var express = require('express');
-var router = express.Router();
+// Exemple dans index.js ou app.js
 
-module.exports = router;
+// Si vous utilisez Express.js
+const express = require("express");
+const app = express();
+
+// Autres routes et middlewares...
+
+// Route pour la racine
+app.get("/", (req, res) => {
+  res.send("Welcome to the Weather App Backend");
+});
+
+// Démarrage du serveur
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
